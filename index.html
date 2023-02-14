@@ -13,31 +13,40 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <header class="container-fluid">
-        <div class="row">
-            <div class="col-2">aa</div>
+    <header class="container-fluid py-2">
+        <div class="row align-items-center">
+            <div class="col-2">
+                <div>
+                    <img class="img-fluid d-none d-lg-inline-block" src="img/logo.svg" alt="logo">
+                </div>
+            </div>
             <div class="col-8">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             </div>
-            <div class="col-2">cc</div>
+            <div class="col-2 d-flex justify-content-evenly">
+                <i class="fa-solid fa-list-ul d-none d-lg-inline-block"></i>
+                <i class="fa-solid fa-circle-question d-none d-lg-inline-block"></i>
+                <i class="fa-solid fa-ellipsis-vertical d-none d-lg-inline-block"></i>
+                <i class="fa-solid fa-bell"></i>
+            </div>
         </div>
     </header>
     <main class="row">
         <aside class="col-1 col-lg-2">
-            <nav class="d-flex flex-column justify-content-between h-100 p-2">
+            <nav class="d-flex flex-column justify-content-between h-100 p-3">
                 <ul class="list-unstyled">
                     <li>
                         <i class="fa-solid fa-house"></i>
-                        <a class="d-none d-lg-inline-block" href="#">prova</a>
+                        <a class="d-none d-lg-inline-block text-white" href="#">Home</a>
                     </li>
-                    <li><i class="fa-solid fa-house"></i>
-                        <a class="d-none d-lg-inline-block" href="#">prova</a></li>
-                    <li><i class="fa-solid fa-house"></i>
-                        <a class="d-none d-lg-inline-block" href="#">prova</a></li>
+                    <li><i class="fa-solid fa-chart-simple"></i>
+                        <a class="d-none d-lg-inline-block text-white" href="#">Stats</a></li>
+                    <li><i class="fa-solid fa-signal"></i>
+                        <a class="d-none d-lg-inline-block text-white" href="#">Signals</a></li>
                 </ul>
                 <ul class="list-unstyled">
-                    <li><i class="fa-solid fa-house"></i>
-                        <a class="d-none d-lg-inline-block" href="#">prova basso</a></li>
+                    <li><i class="fa-solid fa-gear"></i>
+                        <a class="d-none d-lg-inline-block text-white" href="#">Admin</a></li>
                 </ul>
             </nav>
         </aside>

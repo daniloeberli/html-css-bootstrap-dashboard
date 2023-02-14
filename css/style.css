@@ -31,3 +31,7 @@ aside i{
 a{
     text-decoration: none;
 }
+
+#main-box{
+    overflow-y: auto;
+}
