@@ -13,10 +13,12 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <header class="container-fluid py-2">
+    <!--header-->
+    <header class="container-fluid">
         <div class="row align-items-center">
             <div class="col-2">
                 <div>
+                    
                     <img class="img-fluid d-none d-lg-inline-block" src="img/logo.svg" alt="logo">
                 </div>
             </div>
@@ -27,11 +29,14 @@
                 <i class="fa-solid fa-list-ul d-none d-lg-inline-block"></i>
                 <i class="fa-solid fa-circle-question d-none d-lg-inline-block"></i>
                 <i class="fa-solid fa-ellipsis-vertical d-none d-lg-inline-block"></i>
-                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-bell text-warning"></i>
             </div>
         </div>
     </header>
+    <!--/header-->
+    <!--struttura principale-->
     <main class="row">
+        <!--sidebar-->
         <aside class="col-1 col-lg-2">
             <nav class="d-flex flex-column justify-content-between h-100 p-3">
                 <ul class="list-unstyled">
@@ -49,13 +54,120 @@
                         <a class="d-none d-lg-inline-block text-white" href="#">Admin</a></li>
                 </ul>
             </nav>
+        <!--/sidebar-->    
         </aside>
+        <!--box principale-->
         <div id="main-box" class="col p-0">
             <div id="main-top">
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-4 col-lg-3 order-md-last">
+                            <span>Nuovo studente</span>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-6">
+                            <h2>Boolean</h2>
+                            <span class="badge badge-pill bg-dark">Danger</span>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-3">
+                            <span>Studenti online negli ultimi 30 minuti</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="main-bottom">
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <div class="card">
+                                <div class="card-header">
+                                  <h2>Prossime classi</h2>
+                                </div>
+                                <div class="card-body">
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Data inizio</th>
+                                        <th scope="col">ROI</th>
+                                        <th scope="col">Stato</th>
+                                        <th scope="col">Azioni</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>@mdo</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td>@mdo</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                        <td>@mdo</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2>F.A.Q</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                              Come aggiungere un nuovo studente?
+                                            </button>
+                                          </h2>
+                                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                              Accordion Item #2
+                                            </button>
+                                          </h2>
+                                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                              Accordion Item #3
+                                            </button>
+                                          </h2>
+                                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">b</div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
