@@ -13,6 +13,7 @@ main{
 }
 
 aside{
+    height: 100%;
     width: auto;
     padding: 10px;
     background-color: #051e34;
@@ -33,4 +34,5 @@ a{
 
 #main-box{
     overflow-y: auto;
+    height: 100%;
 }
