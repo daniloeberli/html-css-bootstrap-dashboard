@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>Dashboard</title>
 </head>
@@ -15,20 +16,28 @@
     <header class="container-fluid">
         <div class="row">
             <div class="col-2">aa</div>
-            <div class="col-8">bb</div>
+            <div class="col-8">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </div>
             <div class="col-2">cc</div>
         </div>
     </header>
     <main class="row">
-        <aside class="col-2">
-            <nav class="d-flex flex-column justify-content-between h-100">
+        <aside class="col-1 col-lg-2">
+            <nav class="d-flex flex-column justify-content-between h-100 p-2">
                 <ul class="list-unstyled">
-                    <li><a href="#">prova</a></li>
-                    <li><a href="#">prova</a></li>
-                    <li><a href="#">prova</a></li>
+                    <li>
+                        <i class="fa-solid fa-house"></i>
+                        <a class="d-none d-lg-inline-block" href="#">prova</a>
+                    </li>
+                    <li><i class="fa-solid fa-house"></i>
+                        <a class="d-none d-lg-inline-block" href="#">prova</a></li>
+                    <li><i class="fa-solid fa-house"></i>
+                        <a class="d-none d-lg-inline-block" href="#">prova</a></li>
                 </ul>
                 <ul class="list-unstyled">
-                    <li><a href="#">prova basso</a></li>
+                    <li><i class="fa-solid fa-house"></i>
+                        <a class="d-none d-lg-inline-block" href="#">prova basso</a></li>
                 </ul>
             </nav>
         </aside>
