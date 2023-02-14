@@ -10,11 +10,15 @@ header{
 
 main{
     height: calc(100% - 4.375rem);
-    background-color: pink;
 }
 
 aside{
     width: auto;
     padding: 10px;
     background-color: blue;
+}
+
+#main-top{
+    height: 200px;
+    background-color: red;
 }
