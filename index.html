@@ -26,9 +26,9 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             </div>
             <div class="col-auto d-flex align-items-center">
-                <i class="fa-solid fa-list-ul d-none d-lg-inline-block"></i>
-                <i class="fa-solid fa-circle-question d-none d-lg-inline-block"></i>
-                <i class="fa-solid fa-ellipsis-vertical d-none d-lg-inline-block"></i>
+                <a href="#"><i class="fa-solid fa-list-ul d-none d-lg-inline-block"></i></a>
+                <a href="#"><i class="fa-solid fa-circle-question d-none d-lg-inline-block"></i></a>
+                <a href="#"><i class="fa-solid fa-ellipsis-vertical d-none d-lg-inline-block"></i></a>
                 <div class="dropdown">
                   <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fa-solid fa-bell text-warning"></i>
@@ -67,18 +67,30 @@
         </aside>
         <!--box principale-->
         <div id="main-box" class="col col-lg p-0">
-            <div id="main-top">
+            <div id="main-top" class="text-white py-4">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 col-md-4 col-lg-3 order-md-last">
                             <span>Nuovo studente</span>
+                            <span class="ms-plus-sign">+</span>
                         </div>
                         <div class="col-12 col-md-4 col-lg-6">
-                            <h2>Boolean</h2>
-                            <span class="badge badge-pill bg-dark">Danger</span>
+                          <div>
+                            <span>Boolean</span>
+                            <span class="badge badge-pill ms-btn-color">Piano blaze</span>
+                          </div>
+                          <div>
+                            <span class="badge badge-pill ms-btn-color">3 app</span>
+                            <i class="fa-solid fa-angles-right"></i>
+                            <span class="badge badge-pill ms-btn-color d-none d-sm-inline d-lg-none">+</span>
+                            <span class="badge badge-pill ms-btn-color d-none d-lg-inline">Boolean mobile app</span>
+                            <span class="badge badge-pill ms-btn-color d-none d-lg-inline">Boolean web app</span>
+                            <span class="badge badge-pill ms-btn-color d-none d-lg-inline">Boolean blog app</span>
+                          </div>
                         </div>
                         <div class="col-12 col-md-4 col-lg-3">
                             <span>Studenti online negli ultimi 30 minuti</span>
+                            <div>125</div>
                         </div>
                     </div>
                 </div>
