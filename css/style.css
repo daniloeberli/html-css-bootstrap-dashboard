@@ -61,3 +61,13 @@ a{
     vertical-align: middle;
     font-size: 1.875rem;
 }
+
+#offcanvasExample{
+    width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+    #offcanvasExample{
+        width: 800px;
+    }
+}
