@@ -8,6 +8,10 @@ header{
     background-color: #f8f9fa; 
 }
 
+header i{
+    margin: 0 5px;
+}
+
 main{
     height: calc(100% - 4.375rem);
 }
