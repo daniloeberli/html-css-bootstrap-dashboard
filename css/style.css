@@ -38,9 +38,14 @@ aside i{
     background-color: #1b72e8;
 }
 
+#main-top a{
+    color: white;
+}
+
 a{
     text-decoration: none;
 }
+
 
 #main-box{
     overflow-y: auto;
@@ -60,6 +65,10 @@ a{
     text-align: center;
     vertical-align: middle;
     font-size: 1.875rem;
+}
+
+#ms-class-img{
+    max-width: 30px;
 }
 
 #offcanvasExample{
