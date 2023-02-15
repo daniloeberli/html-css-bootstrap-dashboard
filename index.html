@@ -1,331 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Dashboard</title>
 </head>
+
 <body>
-    <!--header-->
-    <header class="container-fluid py-3">
-        <div class="row align-items-center">
-            <div class="col-auto">
-                <div>
-                    <img src="img/mobile-logo.png" alt="mobile-logo" class="d-inline-block d-lg-none" style="max-width: 30px;">
-                    <img class="img-fluid d-none d-lg-inline-block" src="img/logo.svg" alt="logo">
+  <!--header-->
+  <header class="container-fluid py-3">
+    <div class="row align-items-center">
+      <div class="col-auto">
+        <div>
+          <img src="img/mobile-logo.png" alt="mobile-logo" class="d-inline-block d-lg-none" style="max-width: 30px;">
+          <img class="img-fluid d-none d-lg-inline-block" src="img/logo.svg" alt="logo">
+        </div>
+      </div>
+      <div class="col">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </div>
+      <div class="col-auto d-flex align-items-center">
+        <a href="#"><i class="fa-solid fa-list-ul d-none d-lg-inline-block"></i></a>
+        <a href="#"><i class="fa-solid fa-circle-question d-none d-lg-inline-block"></i></a>
+        <a href="#"><i class="fa-solid fa-ellipsis-vertical d-none d-lg-inline-block"></i></a>
+        <div class="dropdown">
+          <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-bell text-warning"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Profilo</a>
+            <a class="dropdown-item" href="#">Fatturazione</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--/header-->
+  <!--struttura principale-->
+  <main class="row">
+    <!--sidebar-->
+    <aside class="col-auto col-lg-auto">
+      <nav class="d-flex flex-column justify-content-between h-100 p-3">
+        <ul class="list-unstyled">
+          <li>
+            <i class="fa-solid fa-house"></i>
+            <a class="d-none d-lg-inline-block text-white" href="#">Home</a>
+          </li>
+          <li><i class="fa-solid fa-chart-simple"></i>
+            <a class="d-none d-lg-inline-block text-white" href="#">Stats</a>
+          </li>
+          <li><i class="fa-solid fa-signal"></i>
+            <a class="d-none d-lg-inline-block text-white" href="#">Signals</a>
+          </li>
+        </ul>
+        <ul class="list-unstyled">
+          <li><i class="fa-solid fa-gear"></i>
+            <a class="d-none d-lg-inline-block text-white" href="#">Admin</a>
+          </li>
+        </ul>
+      </nav>
+      <!--/sidebar-->
+    </aside>
+    <!--box principale-->
+    <div id="main-box" class="col col-lg p-0">
+      <div id="main-top" class="text-white py-4">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-md-4 col-lg-3 order-md-last">
+              <span>Nuovo studente</span>
+              <span class="ms-plus-sign">
+                <a data-bs-toggle="offcanvas" href="#offcanvasExample" aria-controls="offcanvasExample">+</a>
+              </span>
+            </div>
+            <div class="col-12 col-md-4 col-lg-6">
+              <div>
+                <span>Boolean</span>
+                <span class="badge badge-pill ms-btn-color">Piano blaze</span>
+              </div>
+              <div>
+                <span class="badge badge-pill ms-btn-color">3 app</span>
+                <i class="fa-solid fa-angles-right"></i>
+                <span class="badge badge-pill ms-btn-color d-none d-sm-inline d-lg-none">+</span>
+                <span class="badge badge-pill ms-btn-color d-none d-lg-inline">Boolean mobile app</span>
+                <span class="badge badge-pill ms-btn-color d-none d-lg-inline">Boolean web app</span>
+                <span class="badge badge-pill ms-btn-color d-none d-lg-inline">Boolean blog app</span>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-3">
+              <span>Studenti online negli ultimi 30 minuti</span>
+              <div>125</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="main-bottom" class="mt-4">
+        <div class="container-fluid">
+          <div class="row">
+            <!--componente prossime classi-->
+            <div class="col-12 col-lg-8">
+              <div class="card" id="next-class">
+                <div class="card-header">
+                  <h2>Prossime classi</h2>
                 </div>
-            </div>
-            <div class="col">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            </div>
-            <div class="col-auto d-flex align-items-center">
-                <a href="#"><i class="fa-solid fa-list-ul d-none d-lg-inline-block"></i></a>
-                <a href="#"><i class="fa-solid fa-circle-question d-none d-lg-inline-block"></i></a>
-                <a href="#"><i class="fa-solid fa-ellipsis-vertical d-none d-lg-inline-block"></i></a>
-                <div class="dropdown">
-                  <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa-solid fa-bell text-warning"></i>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Profilo</a>
-                    <a class="dropdown-item" href="#">Fatturazione</a>
-                    <a class="dropdown-item" href="#">Logout</a>
+                <div class="card-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="w-50">Nome</th>
+                        <th scope="col" class="d-none d-md-table-cell">Data inizio</th>
+                        <th scope="col" class="d-none d-md-table-cell">ROI</th>
+                        <th scope="col">Stato</th>
+                        <th scope="col">Azioni</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="w-50">
+                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
+                          Classe 89
+                        </th>
+                        <td class="d-none d-md-table-cell">15 Febbraio 2023</td>
+                        <td class="d-none d-md-table-cell">20%</td>
+                        <td><span class="badge bg-success">Primary</span></td>
+                        <td>
+                          <i class="fa-solid fa-pen"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="w-50">
+                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
+                          Classe 90
+                        </th>
+                        <td class="d-none d-md-table-cell">15 Marzo 2023</td>
+                        <td class="d-none d-md-table-cell">20%</td>
+                        <td><span class="badge bg-success">Primary</span></td>
+                        <td>
+                          <i class="fa-solid fa-pen"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="w-50">
+                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
+                          Classe 91
+                        </th>
+                        <td class="d-none d-md-table-cell">15 Aprile 2023</td>
+                        <td class="d-none d-md-table-cell">20%</td>
+                        <td><span class="badge bg-warning">Primary</span></td>
+                        <td>
+                          <i class="fa-solid fa-pen"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="w-50">
+                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
+                          Classe 92
+                        </th>
+                        <td class="d-none d-md-table-cell">15 Maggio 2023</td>
+                        <td class="d-none d-md-table-cell">20%</td>
+                        <td><span class="badge bg-success">Primary</span></td>
+                        <td>
+                          <i class="fa-solid fa-pen"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="w-50">
+                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
+                          Classe 93
+                        </th>
+                        <td class="d-none d-md-table-cell">15 Giugno 2023</td>
+                        <td class="d-none d-md-table-cell">20%</td>
+                        <td><span class="badge bg-danger">Primary</span></td>
+                        <td>
+                          <i class="fa-solid fa-pen"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="w-50">
+                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
+                          Classe 94
+                        </th>
+                        <td class="d-none d-md-table-cell">15 Luglio 2023</td>
+                        <td class="d-none d-md-table-cell">20%</td>
+                        <td><span class="badge bg-success">Primary</span></td>
+                        <td>
+                          <i class="fa-solid fa-pen"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="w-50">
+                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
+                          Classe 95
+                        </th>
+                        <td class="d-none d-md-table-cell">15 Agosto 2023</td>
+                        <td class="d-none d-md-table-cell">20%</td>
+                        <td><span class="badge bg-danger">Primary</span></td>
+                        <td>
+                          <i class="fa-solid fa-pen"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="w-50">
+                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
+                          Classe 96
+                        </th>
+                        <td class="d-none d-md-table-cell">15 Settembre 2023</td>
+                        <td class="d-none d-md-table-cell">20%</td>
+                        <td><span class="badge bg-success">Primary</span></td>
+                        <td>
+                          <i class="fa-solid fa-pen"></i>
+                          <i class="fa-solid fa-trash"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!--componente faq-->
+              <div class="card">
+                <div class="card-header">
+                  <h2>F.A.Q</h2>
+                </div>
+                <div class="card-body">
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Come aggiungere un nuovo studente?
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                          collapse plugin adds the appropriate classes that we use to style each element. These classes
+                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                          modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                          does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Come posso accedere alla informazioni del mio account?
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                          collapse plugin adds the appropriate classes that we use to style each element. These classes
+                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                          modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                          does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Posso usare questa app da mobile?
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                          collapse plugin adds the appropriate classes that we use to style each element. These classes
+                          control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                          modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                          that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                          does limit overflow.
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </header>
-    <!--/header-->
-    <!--struttura principale-->
-    <main class="row">
-        <!--sidebar-->
-        <aside class="col-auto col-lg-auto">
-            <nav class="d-flex flex-column justify-content-between h-100 p-3">
-                <ul class="list-unstyled">
-                    <li>
-                        <i class="fa-solid fa-house"></i>
-                        <a class="d-none d-lg-inline-block text-white" href="#">Home</a>
-                    </li>
-                    <li><i class="fa-solid fa-chart-simple"></i>
-                        <a class="d-none d-lg-inline-block text-white" href="#">Stats</a></li>
-                    <li><i class="fa-solid fa-signal"></i>
-                        <a class="d-none d-lg-inline-block text-white" href="#">Signals</a></li>
-                </ul>
-                <ul class="list-unstyled">
-                    <li><i class="fa-solid fa-gear"></i>
-                        <a class="d-none d-lg-inline-block text-white" href="#">Admin</a></li>
-                </ul>
-            </nav>
-        <!--/sidebar-->    
-        </aside>
-        <!--box principale-->
-        <div id="main-box" class="col col-lg p-0">
-            <div id="main-top" class="text-white py-4">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-md-4 col-lg-3 order-md-last">
-                            <span>Nuovo studente</span>
-                            <span class="ms-plus-sign">
-                              <a data-bs-toggle="offcanvas" href="#offcanvasExample" aria-controls="offcanvasExample">+</a>
-                            </span>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-6">
-                          <div>
-                            <span>Boolean</span>
-                            <span class="badge badge-pill ms-btn-color">Piano blaze</span>
-                          </div>
-                          <div>
-                            <span class="badge badge-pill ms-btn-color">3 app</span>
-                            <i class="fa-solid fa-angles-right"></i>
-                            <span class="badge badge-pill ms-btn-color d-none d-sm-inline d-lg-none">+</span>
-                            <span class="badge badge-pill ms-btn-color d-none d-lg-inline">Boolean mobile app</span>
-                            <span class="badge badge-pill ms-btn-color d-none d-lg-inline">Boolean web app</span>
-                            <span class="badge badge-pill ms-btn-color d-none d-lg-inline">Boolean blog app</span>
-                          </div>
-                        </div>
-                        <div class="col-12 col-md-4 col-lg-3">
-                            <span>Studenti online negli ultimi 30 minuti</span>
-                            <div>125</div>
-                        </div>
-                    </div>
+            <div class="col-12 col-lg-4">
+              <!--componente todo-->
+              <div class="card">
+                <div class="card-header">
+                  <h2>Todo</h2>
                 </div>
-            </div>
-            <div id="main-bottom" class="mt-4">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!--componente prossime classi-->
-                        <div class="col-12 col-lg-8">
-                            <div class="card" id="next-class">
-                                <div class="card-header">
-                                  <h2>Prossime classi</h2>
-                                </div>
-                                <div class="card-body">
-                                  <table class="table">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col" class="w-50">Nome</th>
-                                        <th scope="col" class="d-none d-md-table-cell">Data inizio</th>
-                                        <th scope="col" class="d-none d-md-table-cell">ROI</th>
-                                        <th scope="col">Stato</th>
-                                        <th scope="col">Azioni</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <th scope="row" class="w-50">
-                                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
-                                          Classe 89
-                                        </th>
-                                        <td class="d-none d-md-table-cell">15 Febbraio 2023</td>
-                                        <td class="d-none d-md-table-cell">20%</td>
-                                        <td><span class="badge bg-success">Primary</span></td>
-                                        <td>
-                                          <i class="fa-solid fa-pen"></i>
-                                          <i class="fa-solid fa-trash"></i>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row" class="w-50">
-                                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
-                                          Classe 90
-                                        </th>
-                                        <td class="d-none d-md-table-cell">15 Marzo 2023</td>
-                                        <td class="d-none d-md-table-cell">20%</td>
-                                        <td><span class="badge bg-success">Primary</span></td>
-                                        <td>
-                                          <i class="fa-solid fa-pen"></i>
-                                          <i class="fa-solid fa-trash"></i>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row" class="w-50">
-                                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
-                                          Classe 91
-                                        </th>
-                                        <td class="d-none d-md-table-cell">15 Aprile 2023</td>
-                                        <td class="d-none d-md-table-cell">20%</td>
-                                        <td><span class="badge bg-warning">Primary</span></td>
-                                        <td>
-                                          <i class="fa-solid fa-pen"></i>
-                                          <i class="fa-solid fa-trash"></i>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row" class="w-50">
-                                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
-                                          Classe 92
-                                        </th>
-                                        <td class="d-none d-md-table-cell">15 Maggio 2023</td>
-                                        <td class="d-none d-md-table-cell">20%</td>
-                                        <td><span class="badge bg-success">Primary</span></td>
-                                        <td>
-                                          <i class="fa-solid fa-pen"></i>
-                                          <i class="fa-solid fa-trash"></i>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row" class="w-50">
-                                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
-                                          Classe 93
-                                        </th>
-                                        <td class="d-none d-md-table-cell">15 Giugno 2023</td>
-                                        <td class="d-none d-md-table-cell">20%</td>
-                                        <td><span class="badge bg-danger">Primary</span></td>
-                                        <td>
-                                          <i class="fa-solid fa-pen"></i>
-                                          <i class="fa-solid fa-trash"></i>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row" class="w-50">
-                                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
-                                          Classe 94
-                                        </th>
-                                        <td class="d-none d-md-table-cell">15 Luglio 2023</td>
-                                        <td class="d-none d-md-table-cell">20%</td>
-                                        <td><span class="badge bg-success">Primary</span></td>
-                                        <td>
-                                          <i class="fa-solid fa-pen"></i>
-                                          <i class="fa-solid fa-trash"></i>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row" class="w-50">
-                                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
-                                          Classe 95
-                                        </th>
-                                        <td class="d-none d-md-table-cell">15 Agosto 2023</td>
-                                        <td class="d-none d-md-table-cell">20%</td>
-                                        <td><span class="badge bg-danger">Primary</span></td>
-                                        <td>
-                                          <i class="fa-solid fa-pen"></i>
-                                          <i class="fa-solid fa-trash"></i>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row" class="w-50">
-                                          <img src="img/class-avatar.jpg" alt="class-avatar" class="img-fluid" id="ms-class-img">
-                                          Classe 96
-                                        </th>
-                                        <td class="d-none d-md-table-cell">15 Settembre 2023</td>
-                                        <td class="d-none d-md-table-cell">20%</td>
-                                        <td><span class="badge bg-success">Primary</span></td>
-                                        <td>
-                                          <i class="fa-solid fa-pen"></i>
-                                          <i class="fa-solid fa-trash"></i>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </div>
-                            </div>
-                            <!--componente faq-->
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>F.A.Q</h2>
-                                </div>
-                                <div class="card-body">
-                                    <div class="accordion" id="accordionExample">
-                                        <div class="accordion-item">
-                                          <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                              Come aggiungere un nuovo studente?
-                                            </button>
-                                          </h2>
-                                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                          <h2 class="accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                              Come posso accedere alla informazioni del mio account?
-                                            </button>
-                                          </h2>
-                                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                          <h2 class="accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                              Posso usare questa app da mobile?
-                                            </button>
-                                          </h2>
-                                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <!--componente todo-->
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Todo</h2>
-                                </div>
-                                <div class="card-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">Kick off nuove classi</li>
-                                        <li class="list-group-item"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">Lezione Bootstrap classe 89</li>
-                                        <li class="list-group-item"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">Controlla username github studenti</li>
-                                      </ul>
-                                </div>
-                            </div>
-                            <div class="card">
-                              <img class="card-img-top" src="img/stats.jpeg" alt="Card image cap">
-                              <div class="card-body">
-                                <h5 class="card-title">Utenti attivi</h5>
-                                <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Gennaio</li>
-                                <li class="list-group-item">Febbraio</li>
-                                <li class="list-group-item">Marzo</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
+                <div class="card-body">
+                  <ul class="list-group">
+                    <li class="list-group-item"><input class="form-check-input" type="checkbox" value=""
+                        id="flexCheckDefault">Kick off nuove classi</li>
+                    <li class="list-group-item"><input class="form-check-input" type="checkbox" value=""
+                        id="flexCheckDefault">Lezione Bootstrap classe 89</li>
+                    <li class="list-group-item"><input class="form-check-input" type="checkbox" value=""
+                        id="flexCheckDefault">Controlla username github studenti</li>
+                  </ul>
                 </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="img/stats.jpeg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Utenti attivi</h5>
+                  <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Gennaio</li>
+                  <li class="list-group-item">Febbraio</li>
+                  <li class="list-group-item">Marzo</li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
-    </main>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasLabel">Nuovo studente</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
-        <form>
-          <div class="row">
-            <div class="col-6">
-              <label for="">Nome</label>
-              <input type="text" class="form-control" placeholder="">
+    </div>
+    </div>
+  </main>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasLabel">Nuovo studente</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <form>
+        <div class="row">
+          <div class="col-6">
+            <label for="">Nome</label>
+            <input type="text" class="form-control" placeholder="">
+          </div>
+          <div class="col-6">
+            <label for="">Cognome</label>
+            <input type="text" class="form-control" placeholder="">
+          </div>
+          <div class="col-6">
+            <label for="inlineFormInputGroup">Email</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="">
             </div>
-            <div class="col-6">
-              <label for="">Cognome</label>
-              <input type="text" class="form-control" placeholder="">
-            </div>
-            <div class="col-6">
-              <label for="">Email</label>
-              <input type="text" class="form-control" placeholder="">
-            </div>
+          </div>  
             <div class="col-6">
               <label for="">Password</label>
               <input type="text" class="form-control" placeholder="">
@@ -349,6 +387,15 @@
               <label for="">CAP</label>
               <input type="text" class="form-control" placeholder="">
             </div>
+            <div class="col-12">
+              <label for="inlineFormInputGroup">Foto</label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Scegli file</div>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nessun file selezionato">
+              </div>
+            </div>
             <div class="form-group">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -361,12 +408,19 @@
               <button type="submit" class="btn btn-primary">Salva</button>
               <button type="reset" class="btn btn-warning">Svuota</button>
             </div>
-        </form>
-      </div>
+      </form>
     </div>
-    <!--javascript-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </div>
+  <!--javascript-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
