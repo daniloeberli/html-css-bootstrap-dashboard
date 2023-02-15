@@ -35,7 +35,9 @@ aside i{
     width: 25px;
 }
 
-
+aside nav li:hover{
+    background-color: gray;
+}
 
 #main-top{
     background-color: #1b72e8;
