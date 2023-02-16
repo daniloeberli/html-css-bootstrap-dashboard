@@ -1,3 +1,6 @@
+/*
+Common
+*/
 body{
     font-family: 'Roboto', sans-serif;
     height: 100vh;
@@ -62,6 +65,9 @@ a{
     height: 100%;
 }
 
+/*
+My style
+*/
 .ms-btn-color{
     background-color: #165bba;
 }
@@ -84,6 +90,10 @@ a{
 #offcanvasExample{
     width: 100%;
 }
+
+/*
+Media Query
+*/
 
 @media screen and (min-width: 1200px) {
     #offcanvasExample{
